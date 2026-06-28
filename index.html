@@ -35,9 +35,10 @@ p{color:#334155;line-height:1.6}
 
 .card{border:1px solid #e5e7eb;border-radius:16px;padding:20px;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.02)}
 .grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px} /* 新增雙欄排版 */
 .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:768px){
-  .grid-3, .row, .info-grid{grid-template-columns:1fr !important}
+  .grid-3, .grid-2, .row, .info-grid{grid-template-columns:1fr !important} /* 讓新區塊在手機上自動垂直堆疊 */
   .cta-group{flex-direction:column;align-items:stretch}
   .cta-group .btn{width:100%}
 }
@@ -46,6 +47,9 @@ p{color:#334155;line-height:1.6}
 /* 菜單圖片特製容器 */
 .menu-container{max-width:700px;margin:0 auto;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.1);border:1px solid #e5e7eb}
 .menu-container img{width:100%;height:auto;display:block}
+
+/* 新品專用直式圖片容器 */
+.poster-img {width:100%;height:auto;display:block}
 
 footer{color:#64748b;font-size:12px;padding:48px 0;text-align:center}
 a{color:inherit}
@@ -91,7 +95,7 @@ a{color:inherit}
   <div class="container grid grid-3">
     <div class="card"><div style="font-weight:700;color:#0f766e">🐢 國民美食</div><div class="small" style="margin-top:6px">大人小孩都喜愛，創新口味，回憶小時候的雞蛋糕香氣。</div></div>
     <div class="card"><div style="font-weight:700;color:#0f766e">🥛 真材實料</div><div class="small" style="margin-top:6px">香草卡士達堅持手工熬煮，不使用卡士達粉，完美比例、香濃滑順。</div></div>
-    <div class="card"><div style="font-weight:700;color:#0f766e">🔥 現烤出爐</div><div class="small" style="margin-top:6px">堅持下單現做，剛出爐外酥內軟，拿到手依然熱騰騰。</div></div>
+    <div class="card"><div style="font-weight:700;color:#0f766e">🔥 現烤出爐</div><div class="small" style="margin-top:6px">堅持下單現做，剛出爐外酥內軟，拿到手依然熱騰騰.</div></div>
   </div>
 </section>
 
@@ -106,6 +110,36 @@ a{color:inherit}
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <h2 style="text-align:center">✨ 限定特選新品 ✨</h2>
+    <p style="text-align:center;margin-top:-8px;margin-bottom:32px;color:#64748b">海島最夯話題！挑戰味蕾的奢華海味與夏日最萌消暑首選</p>
+    
+    <div class="grid grid-2">
+      <div class="card" style="padding:0;overflow:hidden;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+        <img class="poster-img" src="oyster-special.jpg" alt="每日限量溫生蠔海龜燒">
+        <div style="padding:20px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <span style="font-weight:700;font-size:18px;color:#0f766e">🦪 每日限量・溫生蠔海龜燒</span>
+            <span style="font-weight:700;color:#f59e0b;font-size:16px">一枝獨秀 $120 / 成雙成對 $200</span>
+          </div>
+          <p style="margin:12px 0 0;font-size:14px;color:#475569">嚴選「日本兵庫縣生食級生蠔」整顆霸氣包入現烤海龜燒中！外酥內軟的餅皮搭配滑嫩爆汁的鮮甜海味，來小琉球絕對要挑戰的極致創意點心！</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:0;overflow:hidden;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+        <img class="poster-img" src="ice-series.jpg" alt="超人氣海龜冰棒與棒棒糖">
+        <div style="padding:20px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+            <span style="font-weight:700;font-size:18px;color:#0f766e">🧊 消暑超萌・海龜冰棒 ＆ 棒棒糖</span>
+            <span style="font-weight:700;color:#f59e0b;font-size:16px">冰棒 $80/支 ｜ 棒棒糖 $25/支</span>
+          </div>
+          <p style="margin:12px 0 0;font-size:14px;color:#475569">炎炎夏日看海拍照必備！超可愛立體海龜造型，冰棒提供巧克力、草莓、牛奶、芒果、百香果、多多等 6 款濃郁消暑風味；棒棒糖更有 7 種酸甜水果口味任你選！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="container">
     <h2 style="text-align:center">美味菜單</h2>
