@@ -107,17 +107,16 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .hint{margin-top:18px;font-size:14px;color:var(--coral-2);font-weight:500;display:flex;align-items:center;gap:6px}
 .hero-img{position:relative}
-.hero-img .frame{aspect-ratio:4/5;border-radius:200px 200px var(--radius) var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--sand-2)}
+.hero-img .frame{aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--sand-2)}
 .hero-img img{width:100%;height:100%;object-fit:cover}
-.badge-float{position:absolute;left:-24px;bottom:40px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
+.badge-float{width:fit-content;margin:20px auto 0;background:#fff;border-radius:18px;padding:12px 20px;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;align-items:center;gap:12px}
 .badge-float b{font-family:var(--serif);font-size:22px;color:var(--ocean);display:block;line-height:1.1}
 .badge-float span{font-size:12px;color:var(--muted)}
 @media (max-width:860px){
   .hero{padding:32px 0 56px}
   .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-img{order:-1;max-width:440px;margin:0 auto;width:100%}
-  .hero-img .frame{aspect-ratio:1/1;border-radius:var(--radius)}
-  .badge-float{left:12px;bottom:12px}
+  .hero-img{order:-1;max-width:560px;margin:0 auto;width:100%}
+  .badge-float{margin-top:16px}
   .cta .btn{flex:1 1 100%}
 }
 
@@ -146,10 +145,9 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28
 /* ---------- 限定口味 ---------- */
 .limited{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .lim-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;border:1px solid var(--line)}
-.lim-card .pic{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--sand-2)}
-.lim-card .pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.lim-card:hover .pic img{transform:scale(1.04)}
-.tag{position:absolute;top:16px;left:16px;background:var(--coral);color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em;padding:6px 12px;border-radius:999px}
+.lim-card .pic{position:relative;aspect-ratio:1054/1492;overflow:hidden;background:var(--sand-2)}
+.lim-card .pic img{width:100%;height:100%;object-fit:cover}
+.tag{align-self:flex-start;margin-bottom:12px;background:var(--coral);color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em;padding:6px 12px;border-radius:999px}
 .tag.ocean{background:var(--ocean)}
 .lim-body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
 .lim-body h3{font-family:var(--serif);font-size:22px;margin:0 0 8px;color:var(--ink)}
@@ -163,12 +161,12 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28
 /* ---------- 人氣口味 ---------- */
 .flavors{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .flavor{text-align:center}
-.flavor .pic{aspect-ratio:1/1;border-radius:50%;overflow:hidden;margin:0 auto 18px;width:82%;border:6px solid #fff;box-shadow:var(--shadow);background:var(--sand-2)}
+.flavor .pic{aspect-ratio:3/2;border-radius:var(--radius);overflow:hidden;margin:0 auto 18px;width:100%;border:6px solid #fff;box-shadow:var(--shadow);background:var(--sand-2)}
 .flavor .pic img{width:100%;height:100%;object-fit:cover}
 .flavor h3{font-family:var(--serif);font-size:20px;margin:0 0 4px}
 .flavor p{margin:0;font-size:14px;color:var(--muted)}
 .flavor .no{font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:700}
-@media (max-width:760px){.flavors{grid-template-columns:1fr;gap:40px}.flavor .pic{width:64%}}
+@media (max-width:760px){.flavors{grid-template-columns:1fr;gap:40px}.flavor .pic{width:100%}}
 
 /* ---------- 菜單 ---------- */
 .menu-wrap{max-width:720px;margin:0 auto;background:#fff;padding:14px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
@@ -295,10 +293,10 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
     <div class="limited">
       <article class="lim-card reveal">
         <div class="pic">
-          <span class="tag">每日限量</span>
           <img src="oyster-special.jpg" alt="每日限量溫生蠔海龜燒" loading="lazy">
         </div>
         <div class="lim-body">
+          <span class="tag">每日限量</span>
           <h3>🦪 溫生蠔海龜燒</h3>
           <p>嚴選日本兵庫縣生食級生蠔，整顆霸氣包進現烤海龜燒。外酥內軟的餅皮搭配滑嫩爆汁的鮮甜海味，來小琉球一定要挑戰的創意點心！</p>
           <div class="price-row">
@@ -311,10 +309,10 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
 
       <article class="lim-card reveal">
         <div class="pic">
-          <span class="tag ocean">夏日消暑</span>
           <img src="ice-series.jpg" alt="海龜冰棒與海龜棒棒糖" loading="lazy">
         </div>
         <div class="lim-body">
+          <span class="tag ocean">夏日消暑</span>
           <h3>🧊 海龜冰棒 ＆ 棒棒糖</h3>
           <p>看海拍照必備的立體海龜造型！冰棒有巧克力、草莓、牛奶、芒果、百香果、多多 6 種口味；棒棒糖更有 7 種酸甜水果口味任你選。</p>
           <div class="price-row">
