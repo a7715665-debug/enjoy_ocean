@@ -457,5 +457,25 @@ const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
 }, {threshold:.12}) : null;
 document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
 </script>
+<!-- Google Ads 點擊轉換追蹤：地圖導航／電話／IG -->
+<script>
+const ADS_CONVERSIONS = {
+  map:   'AW-17087089325/XTXYCNGK8LcdEK2V4dM_',
+  phone: 'AW-17087089325/QLfDCNSK8LcdEK2V4dM_',
+  ig:    'AW-17087089325/s0ruCJmO8LcdEK2V4dM_'
+};
+document.addEventListener('click', function (e) {
+  const a = e.target.closest && e.target.closest('a');
+  if (!a) return;
+  const href = a.getAttribute('href') || '';
+  let label = null;
+  if (href.indexOf('tel:') === 0) label = ADS_CONVERSIONS.phone;
+  else if (href.indexOf('maps.app.goo.gl') !== -1 || href.indexOf('google.com/maps') !== -1) label = ADS_CONVERSIONS.map;
+  else if (href.indexOf('instagram.com') !== -1) label = ADS_CONVERSIONS.ig;
+  if (label && typeof gtag === 'function') {
+    gtag('event', 'conversion', { send_to: label, transport_type: 'beacon' });
+  }
+});
+</script>
 </body>
 </html>
