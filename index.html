@@ -207,8 +207,13 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28
 .info strong{font-size:17px;color:var(--ink)}
 .info a strong{color:var(--ocean)}
 .info .call{color:var(--coral-2)!important;font-size:22px;letter-spacing:.04em}
-.map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:340px;background:var(--sand-2);border:1px solid var(--line)}
+.map{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:340px;background:var(--sand-2);border:1px solid var(--line)}
 .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+/* 地圖上蓋一層透明連結：點地圖就開 Google 地圖導航（也會被轉換追蹤記錄） */
+.map-link{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding:18px}
+.map-link span{display:inline-flex;align-items:center;gap:8px;background:var(--ocean);color:#fff;font-weight:700;font-size:15px;padding:12px 22px;border-radius:999px;box-shadow:0 10px 24px -10px rgba(11,79,84,.7);transition:background .2s}
+.map-link span svg{width:18px;height:18px}
+.map-link:hover span{background:var(--ocean-2)}
 @media (max-width:860px){.visit{grid-template-columns:1fr}}
 
 /* ---------- 頁尾 ---------- */
@@ -430,6 +435,7 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
       </div>
       <div class="map reveal">
         <iframe src="https://www.google.com/maps?q=%E5%B1%8F%E6%9D%B1%E7%B8%A3%E7%90%89%E7%90%83%E9%84%89%E6%B0%91%E7%94%9F%E8%B7%AF27-1%E8%99%9F&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="看海過日子地圖"></iframe>
+        <a class="map-link" href="https://maps.app.goo.gl/kTB1axuDEsMHYi3e6?g_st=ic" target="_blank" rel="noopener" aria-label="開啟 Google 地圖導航到看海過日子"><span><svg><use href="#i-map"/></svg>點擊開啟 Google 導航</span></a>
       </div>
     </div>
   </div>
