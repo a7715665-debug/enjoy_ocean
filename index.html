@@ -155,7 +155,7 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28
 @media (max-width:760px){.section{padding:64px 0}.head{margin-bottom:36px}}
 
 /* ---------- 限定口味 ---------- */
-.limited{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.limited{display:grid;grid-template-columns:1fr;gap:24px;max-width:900px;margin:0 auto}
 .lim-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;border:1px solid var(--line)}
 .lim-card .pic{position:relative;aspect-ratio:1054/1492;overflow:hidden;background:var(--sand-2)}
 .lim-card .pic img{width:100%;height:100%;object-fit:cover}
@@ -171,7 +171,20 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28
 .price{background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:8px 14px;font-size:13px;color:var(--muted)}
 .price b{color:var(--coral-2);font-size:17px;margin-left:4px}
 .lim-body .btn{align-self:flex-start}
-@media (max-width:760px){.limited{grid-template-columns:1fr}}
+@media (min-width:761px){
+  .lim-card.wide{flex-direction:row}
+  .lim-card.wide .pic{width:42%;flex:none}
+  .lim-card.wide .lim-body{justify-content:center;padding:36px 40px}
+  .lim-card.wide .lim-body p{flex:none}
+}
+/* 季節限定小卡 */
+.season-card{display:flex;gap:20px;align-items:center;background:var(--sand-2);border:1px dashed var(--line);border-radius:18px;padding:16px}
+.season-card .thumb{width:104px;flex:none;aspect-ratio:1054/1492;border-radius:12px;overflow:hidden;background:#fff}
+.season-card .thumb img{width:100%;height:100%;object-fit:cover}
+.season-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:2px 10px}
+.season-body h3{font-family:var(--serif);font-size:18px;margin:6px 0 4px;color:var(--ink)}
+.season-body p{margin:0 0 12px;font-size:13.5px;color:var(--muted);line-height:1.6}
+@media (max-width:480px){.season-card{align-items:flex-start;gap:14px;padding:14px}.season-card .thumb{width:80px}}
 
 /* ---------- 人氣口味 ---------- */
 .flavors{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -311,23 +324,7 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
     </div>
 
     <div class="limited">
-      <article class="lim-card reveal">
-        <div class="pic">
-          <img src="oyster-special.jpg" alt="每日限量溫生蠔海龜燒" loading="lazy">
-        </div>
-        <div class="lim-body">
-          <div class="tags"><span class="tag">每日限量</span><span class="tag gold">旺季限定</span></div>
-          <h3>🦪 溫生蠔海龜燒</h3>
-          <p><b style="color:var(--coral-2)">【旺季限定】</b>嚴選日本兵庫縣生食級生蠔，整顆霸氣包進現烤海龜燒。外酥內軟的餅皮搭配滑嫩爆汁的鮮甜海味，來小琉球一定要挑戰的創意點心！</p>
-          <div class="price-row">
-            <span class="price">一枝獨秀<b>$120</b></span>
-            <span class="price">成雙成對<b>$200</b></span>
-          </div>
-          <a class="btn btn-call btn-sm" href="tel:+886980008291"><svg><use href="#i-phone"/></svg>限量・先來電預留</a>
-        </div>
-      </article>
-
-      <article class="lim-card reveal">
+      <article class="lim-card wide reveal">
         <div class="pic">
           <img src="ice-series.jpg" alt="海龜冰棒與海龜棒棒糖" loading="lazy">
         </div>
@@ -341,6 +338,19 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
           </div>
           <a class="btn btn-ghost btn-sm" href="https://www.instagram.com/enjoy_ocean_/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>看今日口味</a>
         </div>
+      </article>
+
+      <!-- 季節限定小卡：溫生蠔（非旺季時低調呈現）。旺季開賣時可改回大卡片 -->
+      <article class="season-card reveal">
+        <div class="thumb"><img src="oyster-special.jpg" alt="季節限定溫生蠔海龜燒" loading="lazy"></div>
+        <div class="season-body">
+          <span class="season-tag">季節限定</span>
+          <h3>🦪 溫生蠔海龜燒</h3>
+          <p>嚴選日本兵庫縣生食級生蠔，整顆包進現烤海龜燒。旺季限定供應，開賣消息請鎖定 IG！</p>
+          <a class="btn btn-ghost btn-sm" href="https://www.instagram.com/enjoy_ocean_/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>IG 看開賣消息</a>
+        </div>
+      </article>
+    </div>
       </article>
     </div>
   </div>
