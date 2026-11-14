@@ -106,7 +106,9 @@ nav a:hover{color:var(--ocean)}
 @media (max-width:860px){nav{display:none}}
 
 /* ---------- 主視覺 ---------- */
-.hero{position:relative;padding:56px 0 80px;overflow:hidden}
+.hero{position:relative;padding:56px 0 80px;overflow:hidden;isolation:isolate}
+/* 主視覺背景：原海龜燒照片淡化鋪底，想換背景圖改這裡的檔名 */
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,246,239,.55) 0%,rgba(250,246,239,.35) 60%,var(--sand) 100%),url("DSC05117-2.jpg") center/cover no-repeat;opacity:.28;z-index:-2}
 .hero::before{content:"";position:absolute;right:-180px;top:-120px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,var(--sea) 0%,transparent 70%);z-index:-1}
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--ocean);background:var(--sea);padding:6px 14px;border-radius:999px}
@@ -117,7 +119,7 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .hint{margin-top:18px;font-size:14px;color:var(--coral-2);font-weight:500;display:flex;align-items:center;gap:6px}
 .hero-img{position:relative}
-.hero-img .frame{aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--sand-2)}
+.hero-img .frame{aspect-ratio:3/2;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--sand-2)}
 .hero-img img{width:100%;height:100%;object-fit:cover}
 .badge-float{width:fit-content;margin:20px auto 0;background:#fff;border-radius:18px;padding:12px 20px;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;align-items:center;gap:12px}
 .badge-float b{font-family:var(--serif);font-size:22px;color:var(--ocean);display:block;line-height:1.1}
@@ -279,10 +281,10 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
       <div class="hint">⏱ 現點現烤，建議先來電預約，到店免排隊！</div>
     </div>
     <div class="hero-img reveal">
-      <div class="frame"><img src="DSC05117-2.jpg" alt="起司牽絲海龜燒" fetchpriority="high"></div>
+      <div class="frame"><img src="開心果.PNG" alt="現正熱賣口味：極濃開心果海龜燒" fetchpriority="high"></div>
       <div class="badge-float">
         <div style="font-size:30px">🔥</div>
-        <div><b>下單現烤</b><span>外酥內軟・熱騰騰出爐</span></div>
+        <div><span>現正熱賣口味</span><b>『極濃開心果』</b></div>
       </div>
     </div>
   </div>
