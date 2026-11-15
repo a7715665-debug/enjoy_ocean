@@ -108,7 +108,7 @@ nav a:hover{color:var(--ocean)}
 /* ---------- 主視覺 ---------- */
 .hero{position:relative;padding:56px 0 80px;overflow:hidden;isolation:isolate}
 /* 主視覺背景：DSC05125 照片淡化鋪底，想換背景圖改這裡的檔名 */
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(250,246,239,.55) 0%,rgba(250,246,239,.35) 60%,var(--sand) 100%),url("DSC05125.jpg") center/cover no-repeat;opacity:.28;z-index:-2}
+.hero::after{content:"";position:absolute;top:0;bottom:0;left:0;aspect-ratio:4/3;background:url("DSC05125.jpg") center/cover no-repeat;opacity:.22;z-index:-2;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 60% at 50% 50%,#000 55%,transparent 100%)}
 .hero::before{content:"";position:absolute;right:-180px;top:-120px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,var(--sea) 0%,transparent 70%);z-index:-1}
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--ocean);background:var(--sea);padding:6px 14px;border-radius:999px}
@@ -132,6 +132,7 @@ h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28
 @media (max-width:860px){
   .hero{padding:32px 0 56px}
   .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero::after{top:400px;bottom:auto;left:50%;width:150%;transform:translateX(-50%)}
   .hero-img{order:-1;max-width:560px;margin:0 auto;width:100%}
   .badge-float{margin-top:16px}
   .cta .btn{flex:1 1 100%}
