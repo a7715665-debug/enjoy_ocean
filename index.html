@@ -21,11 +21,11 @@
 <link rel="canonical" href="https://enjoyocean.tw/">
 <meta property="og:url" content="https://enjoyocean.tw/">
 <meta property="og:site_name" content="看海過日子">
-<meta property="og:image" content="https://enjoyocean.tw/DSC05117-2.jpg">
+<meta property="og:image" content="https://enjoyocean.tw/img/og-image.jpg">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="logo-img.PNG">
+<link rel="icon" href="img/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,8 +38,8 @@
   "@type": "Bakery",
   "name": "看海過日子",
   "url": "https://enjoyocean.tw/",
-  "image": "https://enjoyocean.tw/DSC05117-2.jpg",
-  "logo": "https://enjoyocean.tw/logo-img.PNG",
+  "image": "https://enjoyocean.tw/img/og-image.jpg",
+  "logo": "https://enjoyocean.tw/img/logo.png",
   "telephone": "+886-980-008-291",
   "address": {
     "@type": "PostalAddress",
@@ -107,8 +107,8 @@ nav a:hover{color:var(--ocean)}
 
 /* ---------- 主視覺 ---------- */
 .hero{position:relative;padding:56px 0 80px;overflow:hidden;isolation:isolate}
-/* 主視覺背景：DSC05125 照片淡化鋪底，想換背景圖改這裡的檔名 */
-.hero::after{content:"";position:absolute;top:0;bottom:0;left:0;aspect-ratio:4/3;background:url("DSC05125.jpg") center/cover no-repeat;opacity:.22;z-index:-2;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 60% at 50% 50%,#000 55%,transparent 100%)}
+/* 主視覺背景：img/hero-bg.jpg（DSC05125 壓縮版）淡化鋪底，想換背景圖改這裡的檔名 */
+.hero::after{content:"";position:absolute;top:0;bottom:0;left:0;aspect-ratio:4/3;background:url("img/hero-bg.jpg") center/cover no-repeat;opacity:.22;z-index:-2;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 60% 60% at 50% 50%,#000 55%,transparent 100%)}
 .hero::before{content:"";position:absolute;right:-180px;top:-120px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,var(--sea) 0%,transparent 70%);z-index:-1}
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--ocean);background:var(--sea);padding:6px 14px;border-radius:999px}
@@ -270,7 +270,7 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
 <header>
   <div class="container bar">
     <a class="brand" href="#top">
-      <img src="logo-img.PNG" alt="看海過日子 Logo">
+      <img src="img/logo.png" alt="看海過日子 Logo">
       <div>
         <div class="brand-name">看海過日子</div>
         <div class="brand-sub">小琉球・海龜燒專賣</div>
@@ -301,7 +301,7 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
       <div class="hint">⏱ 現點現烤，建議先來電預約，到店免排隊！</div>
     </div>
     <div class="hero-img reveal">
-      <div class="frame"><img src="開心果.PNG" alt="現正熱賣口味：每日限量極濃開心果海龜燒" fetchpriority="high"></div>
+      <div class="frame"><img src="img/pistachio.jpg" alt="現正熱賣口味：每日限量極濃開心果海龜燒" fetchpriority="high"></div>
       <div class="badge-float">
         <div style="font-size:30px">🔥</div>
         <div><span>現正熱賣口味</span><b>『極濃開心果』</b><span class="limit"><i></i>每日限量・售完為止</span></div>
@@ -333,7 +333,7 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
     <div class="limited">
       <article class="lim-card wide reveal">
         <div class="pic">
-          <img src="ice-series.jpg" alt="海龜冰棒與海龜棒棒糖" loading="lazy">
+          <img src="img/ice-series.jpg" alt="海龜冰棒與海龜棒棒糖" loading="lazy">
         </div>
         <div class="lim-body">
           <span class="tag ocean">夏日消暑</span>
@@ -349,7 +349,7 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
 
       <!-- 季節限定小卡：溫生蠔（非旺季時低調呈現）。旺季開賣時可改回大卡片 -->
       <article class="season-card reveal">
-        <div class="thumb"><img src="oyster-special.jpg" alt="季節限定溫生蠔海龜燒" loading="lazy"></div>
+        <div class="thumb"><img src="img/oyster-special.jpg" alt="季節限定溫生蠔海龜燒" loading="lazy"></div>
         <div class="season-body">
           <span class="season-tag">季節限定</span>
           <h3>🦪 溫生蠔海龜燒</h3>
@@ -373,19 +373,19 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
     </div>
     <div class="flavors">
       <div class="flavor reveal">
-        <div class="pic"><img src="卡士達1.png?v=20261115" alt="香草卡士達海龜燒" loading="lazy"></div>
+        <div class="pic"><img src="img/custard.jpg" alt="香草卡士達海龜燒" loading="lazy"></div>
         <div class="no">NO.01</div>
         <h3>香草卡士達</h3>
         <p>手工熬煮、香濃滑順，每日限量售完為止</p>
       </div>
       <div class="flavor reveal">
-        <div class="pic"><img src="image.png" alt="起司牽絲海龜燒" loading="lazy"></div>
+        <div class="pic"><img src="img/cheese.jpg" alt="起司牽絲海龜燒" loading="lazy"></div>
         <div class="no">NO.02</div>
         <h3>超爆起司牽絲</h3>
         <p>鹹甜交織、拉絲感十足，人氣必點</p>
       </div>
       <div class="flavor reveal">
-        <div class="pic"><img src="抹茶.png" alt="抹茶奶酥海龜燒" loading="lazy"></div>
+        <div class="pic"><img src="img/matcha.jpg" alt="抹茶奶酥海龜燒" loading="lazy"></div>
         <div class="no">NO.03</div>
         <h3>濃郁抹茶奶酥</h3>
         <p>抹茶控最愛，茶香與奶香完美融合</p>
@@ -403,7 +403,7 @@ footer .brand-name{font-size:16px;margin-bottom:6px}
       <p>除了海龜燒，還有經典義式提拉米蘇、巴斯克乳酪蛋糕與生日蛋糕預訂</p>
     </div>
     <div class="menu-wrap reveal">
-      <img src="menu.jpg" alt="看海過日子菜單價目表" loading="lazy">
+      <img src="img/menu.jpg" alt="看海過日子菜單價目表" loading="lazy">
     </div>
     <div class="menu-note reveal">
       <a class="btn btn-call" href="tel:+886980008291"><svg><use href="#i-phone"/></svg>生日蛋糕・大量訂購請來電</a>
